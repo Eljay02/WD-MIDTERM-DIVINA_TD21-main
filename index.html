@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eljay Divina's Resume</title>
+    
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="assets/img/ID PIC.png" alt="Eljay Divina" style="width: 2in; height: 2in; border-radius: 10px;"> 
+    </div>
+<div class="container">
+    <header>
+        <h1><strong><span class="header-name">Eljay V. Divina</span></strong></h1>
+    </header>
+    
+        <div class="contact-info" style="color: rgb(0, 0, 0);">
+            <p><strong>Phone:</strong> 09369555197</p>
+            <p><strong>Email:</strong> <a href="mailto:eljaydivina0206@gmail.com" style="color: rgb(0, 0, 0);">eljaydivina0206@gmail.com</a></p>
+            <p><strong>Address:</strong> 3397 Skylark St. Brgy San Juan Anakpawis Floodway, Cainta Rizal</p>
+        </div>
+        
+
+        </header>
+    <div class="home">
+        <h2>Welcome to My Resume</h2>
+        <p>I'm Eljay V. Divina, a passionate BMA student and aspiring graphic designer. Click below to view my resume sections.</p>
+        <button onclick="showResume()">View Resume</button>
+    </div>
+
+    <nav style="display: none;" id="nav">
+        <a href="#" onclick="showSection('about')">About Me</a>
+        <a href="#" onclick="showSection('education')">Education Attainment</a>
+        <a href="#" onclick="showSection('skills')">Skills</a>
+        <a href="#" onclick="showSection('sample-works')">Sample Works</a>
+    </nav>
+
+    <button class="back-button" onclick="goBackHome()">Go Back to Home</button>
+
+    <div class="section" id="about">
+        <nav>
+            <h2>About Me</h2>
+        </nav>
+        <p>I am Eljay V. Divina, a BMA student at FEU Tech, passionate about becoming a graphic designer. I’m dedicated to honing my skills in creativity and technical execution. I aim to create impactful designs that resonate with audiences. With a commitment to continuous learning and growth, I am excited about the future and eager to make a mark in the graphic design industry.</p>
+    </div>
+
+    <div class="section" id="education">
+        <nav>
+            <h2>Academic Background</h2>
+        </nav>
+        <h3>Primary Education</h3>
+        <p>Cainta Catholic College (2011 - 2017)</p>
+        <h3>Secondary Education</h3>
+        <p>Cainta Catholic College (2017 - 2021)<br>Arellano University (2021 - 2023)</p>
+        <h3>Tertiary Education</h3>
+        <p>FEU Institute of Technology (2023 - Present)</p>
+    </div>
+
+    <div class="section" id="skills">
+        <nav>
+            <h2>Skills</h2>
+        </nav>
+        <div class="skills">
+            <div class="skill">Adobe Photoshop</div>
+            <div class="skill">Adobe Illustrator</div>
+            <div class="skill">Graphic Design</div>
+            <div class="skill">Creativity</div>
+        </div>
+    </div>
+    <div class="section" id="sample-works">
+        <nav>
+            <h2>Sample Works</h2>
+        </nav>
+        <div class="work-gallery">
+            <div class="work small">
+                <img src="assets/img/vector.jpg" alt="Sample Work 1" style="width: 2in; height: 3%; border-radius: 10px;"> 
+            </div>
+            <div class="work medium">
+                <img src="assets/img/LE8_DIVINA.jpg" alt="Sample Work 2" style="width: 3in; height: auto;">
+            </div>
+            <div class="work large">
+                <img src="assets/img/LE7_DIVINA.jpg" alt="Sample Work 3" style="width: 4in; height: auto;">
+            </div>
+            <div class="work x-large">
+                <img src="assets/img/MOCKUP FINAL.jpg" alt="Sample Work 4" style="width: 5in; height: auto;">
+            </div>
+        </div>
+    </div>
+    
+
+    
+
+
+</div>
+
+<footer>
+    <p>&copy; 2024 Eljay V. Divina. All rights reserved.</p>
+</footer>
+
+<script>
+    function showResume() {
+        document.querySelector('.home').style.display = 'none'; 
+        document.getElementById('nav').style.display = 'block'; 
+        document.querySelector('.back-button').style.display = 'block'; 
+        showSection('about'); 
+    }
+
+    function showSection(sectionId) {
+        const sections = document.querySelectorAll('.section');
+        sections.forEach(section => {
+            section.style.display = 'none';
+        });
+
+        document.getElementById(sectionId).style.display = 'block';
+    }
+
+    function goBackHome() {
+        document.querySelector('.home').style.display = 'block'; 
+        document.getElementById('nav').style.display = 'none'; 
+        document.querySelector('.back-button').style.display = 'none'; 
+        
+        const sections = document.querySelectorAll('.section');
+        sections.forEach(section => {
+            section.style.display = 'none';
+        });
+    }
+</script>
+
+</body>
+</html>
